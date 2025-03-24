@@ -42,7 +42,7 @@ def generate():
             i -= 1
 
     random.shuffle(strings)    # Shuffle the list of strings
-    print(' , '.join(strings))     # Print the list of strings
+    print("[ " + ' , '.join(strings) + " ]")     # Print the list of strings
     return strings
 
 if __name__ == "__main__":
