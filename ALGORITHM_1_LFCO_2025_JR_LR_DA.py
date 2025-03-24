@@ -23,7 +23,7 @@ def nopalindrome():
             nopal = nopalindrome()
     return nopal
 
-def main():
+def generate():
     strings = []        # List of strings
     for i in range(4):      # Generate 4 palindromes
         new_pal = palindrome()
@@ -42,7 +42,8 @@ def main():
             i -= 1
 
     random.shuffle(strings)    # Shuffle the list of strings
-    print(strings)
+    print(' , '.join(strings))     # Print the list of strings
+    return strings
 
 if __name__ == "__main__":
-    main()
+    generate()

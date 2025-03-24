@@ -1,3 +1,5 @@
+from ALGORITHM_1_LFCO_2025_JR_LR_DA import generate
+
 transitions = [
     [[0, 'σ', 'γ'], [0, 'σγ']],
     [[0, '', 'γ'], [1, 'γ']],
@@ -40,9 +42,16 @@ def PDA(string, index=0, stack=['⊥'], state=starting_state):
             elif input_symbol == '':
                 if PDA(string, index, stack.copy(), next_state):
                     return True
-
     return False
 
+def mainPDA():
+    print("Strings genrated:")
+    strings = generate()
+    for string in strings:
+        if PDA(string):
+            print("\n" + f'"{string}" is accepted by the PDA')
+        else:
+            print("\n" + f'"{string}" is not accepted by the PDA')
 
-string = ("yohagoyogahoy")
-print(PDA(string))
+if __name__ == "__main__":
+    mainPDA()
