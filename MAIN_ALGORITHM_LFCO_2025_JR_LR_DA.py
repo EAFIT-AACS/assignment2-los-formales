@@ -35,7 +35,7 @@ def menu():
                 for s in strings:
                     print_configurations_table(s)
             else:
-                print("No strings b")
+                print("No strings to print.")
 
         elif choice == "5":
             strings = []

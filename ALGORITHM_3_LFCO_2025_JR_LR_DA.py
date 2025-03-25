@@ -11,6 +11,7 @@ def print_configurations_table(input_string):
     accepted, steps = PDA(input_string)
 
     if not accepted:
+        print(f'\nString "{input_string}" was not accepted by the PDA.')
         return
 
     print(f'\nConfigurations on input "{input_string}":')
