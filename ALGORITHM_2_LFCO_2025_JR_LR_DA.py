@@ -65,8 +65,7 @@ def PDA(string, index=0, stack=initial_stack_symbol, state=starting_state, steps
     return False, steps
 
 
-def mainPDA():
-    strings = generate()
+def print_results(strings):
     print("\nStrings Accepted and Rejected by the PDA:")
     accepted = []
     rejected = []
@@ -88,5 +87,7 @@ def mainPDA():
     print('-' * 63)
 
 if __name__ == "__main__":
-    mainPDA()
+    strings = generate()
+    print_results(strings)
+
 
