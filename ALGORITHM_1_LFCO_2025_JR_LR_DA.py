@@ -12,38 +12,37 @@ def palindrome():
     return pal
 
 def nopalindrome():
-    num = random.randint(2, 12)
-    nopal = ''.join(random.choices(string.ascii_lowercase, k=num))      # Randomly generate a string of lowercase letters
-    # Check if the string is a palindrome, if it is, generate a new string
-    if num % 2 == 0:
-        if nopal[0:num//2] == nopal[num//2:]:
-            nopal = nopalindrome()
-    else:
-        if nopal[0:num//2] == nopal[num//2+1:]:
-            nopal = nopalindrome()
-    return nopal
+    while True:
+        num = random.randint(2, 12)
+        nopal = ''.join(random.choices(string.ascii_lowercase, k=num))  # Randomly generate a string of lowercase letters
+
+        # Check if the string is not a palindrome
+        if num % 2 == 0:
+            if nopal[0:num // 2] != nopal[num // 2:]:
+                return nopal        # Return the string if it is not a palindrome
+        else:
+            if nopal[0:num // 2] != nopal[num // 2 + 1:]:
+                return nopal        # Return the string if it is not a palindrome
 
 def generate():
-    strings = []        # List of strings
-    for i in range(4):      # Generate 4 palindromes
-        new_pal = palindrome()
-        # Check if the string is already in the list, if it is, generate a new string
-        if new_pal not in strings:
-            strings.append(new_pal)
-        else:
-            i -= 1
+    strings = set()             # Use a set to store the strings to avoid duplicates
 
-    for i in range(4):      # Generate 4 non-palindromes
-        new_nopal = nopalindrome()
-        # Check if the string is already in the list, if it is, generate a new string
-        if new_nopal not in strings:
-            strings.append(new_nopal)
-        else:
-            i -= 1
+    while len(strings) < 4:
+        new_pal = palindrome()      # Generate palindromes
+        strings.add(new_pal)
 
-    random.shuffle(strings)    # Shuffle the list of strings
-    print("[ " + ' , '.join(strings) + " ]")     # Print the list of strings
-    return strings
+    while len(strings) < 8:
+        new_nopal = nopalindrome()      # Generate non-palindromes
+        strings.add(new_nopal)
+
+    return list(strings)            # Return the list of strings
+
+def print_strings(strings):
+    print("Strings generated:")
+    for i, string in enumerate(strings, 1):
+        string = string if string else 'ε'          # Replace empty strings with 'ε'
+        print(f"{i}. {string}")                     # Print the string
 
 if __name__ == "__main__":
-    generate()
+    strings = generate()
+    print_strings(strings)
