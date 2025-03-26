@@ -285,14 +285,25 @@ This menu makes the PDA system interactive and user-friendly, allowing the user 
 7. Exit
 Choose an option: 1
 Strings generated:
-1. rjmshdiozc
-2. n
-3. hzgwb
-4. hsyvysh
-5. vzuhbhuzv
-6. uuuu
-7. mhoqwifyz
-8. bjhl
+1. yymqppqmyy
+2. kook
+3. acdfsmxtodl
+4. ame
+5. xqgjqssqjgqx
+6. hjrpdwzsqx
+7. zfwhf
+8. nn
+
+=== PDA MENU ===
+1. Generate New strings
+2. Add strings
+3. Validate strings in the PDA
+4. Print tree for the strings accepted by the PDA
+5. Clear string list
+6. Print grammar rules
+7. Exit
+Choose an option: 5
+String list cleared.
 
 === PDA MENU ===
 1. Generate New strings
@@ -306,16 +317,8 @@ Choose an option: 2
 Enter strings separated by commas: ana,sofia
 New List:
 Strings generated:
-1. rjmshdiozc
-2. n
-3. hzgwb
-4. hsyvysh
-5. vzuhbhuzv
-6. uuuu
-7. mhoqwifyz
-8. bjhl
-9. ana
-10. sofia
+1. ana
+2. sofia
 
 === PDA MENU ===
 1. Generate New strings
@@ -331,10 +334,6 @@ Strings Accepted and Rejected by the PDA:
 ---------------------------------------------------------------
 |           ACCEPTED           |           REJECTED           |
 |------------------------------+------------------------------|
-|              n               |          rjmshdiozc          |
-|           hsyvysh            |            hzgwb             |
-|          vzuhbhuzv           |          mhoqwifyz           |
-|             uuuu             |             bjhl             |
 |             ana              |            sofia             |
 ---------------------------------------------------------------
 
@@ -347,72 +346,6 @@ Strings Accepted and Rejected by the PDA:
 6. Print grammar rules
 7. Exit
 Choose an option: 4
-
-String "rjmshdiozc" was not accepted by the PDA.
-
-Configurations on input "n":
------------------------------------------------------------------------------------------
-|      |            CFG G             |                      PDA M                      |
-|------+------------------------------+-------------------------------------------------|
-| Rule |       Derivation in G        | State |       String       |       Stack        |
-|------+------------------------------+-------+--------------------+--------------------|
-|      |              Ψ               |   q   |         n          |         Ψ          |
-|  II  |              n               |   q   |         ε          |         ε          |
------------------------------------------------------------------------------------------
-
-String "hzgwb" was not accepted by the PDA.
-
-Configurations on input "hsyvysh":
------------------------------------------------------------------------------------------
-|      |            CFG G             |                      PDA M                      |
-|------+------------------------------+-------------------------------------------------|
-| Rule |       Derivation in G        | State |       String       |       Stack        |
-|------+------------------------------+-------+--------------------+--------------------|
-|      |              Ψ               |   q   |      hsyvysh       |         Ψ          |
-|   I  |             hΨH              |   q   |       syvysh       |         ΨH         |
-|   I  |            hsΨSH             |   q   |       yvysh        |        ΨSH         |
-|   I  |           hsyΨYSH            |   q   |        vysh        |        ΨYSH        |
-|  II  |           hsyvYSH            |   q   |        ysh         |        YSH         |
-|  IV  |           hsyvySH            |   q   |         sh         |         SH         |
-|  IV  |           hsyvysH            |   q   |         h          |         H          |
-|  IV  |           hsyvysh            |   q   |         ε          |         ε          |
------------------------------------------------------------------------------------------
-
-Configurations on input "vzuhbhuzv":
------------------------------------------------------------------------------------------
-|      |            CFG G             |                      PDA M                      |
-|------+------------------------------+-------------------------------------------------|
-| Rule |       Derivation in G        | State |       String       |       Stack        |
-|------+------------------------------+-------+--------------------+--------------------|
-|      |              Ψ               |   q   |     vzuhbhuzv      |         Ψ          |
-|   I  |             vΨV              |   q   |      zuhbhuzv      |         ΨV         |
-|   I  |            vzΨZV             |   q   |      uhbhuzv       |        ΨZV         |
-|   I  |           vzuΨUZV            |   q   |       hbhuzv       |        ΨUZV        |
-|   I  |          vzuhΨHUZV           |   q   |       bhuzv        |       ΨHUZV        |
-|  II  |          vzuhbHUZV           |   q   |        huzv        |        HUZV        |
-|  IV  |          vzuhbhUZV           |   q   |        uzv         |        UZV         |
-|  IV  |          vzuhbhuZV           |   q   |         zv         |         ZV         |
-|  IV  |          vzuhbhuzV           |   q   |         v          |         V          |
-|  IV  |          vzuhbhuzv           |   q   |         ε          |         ε          |
------------------------------------------------------------------------------------------
-
-Configurations on input "uuuu":
------------------------------------------------------------------------------------------
-|      |            CFG G             |                      PDA M                      |
-|------+------------------------------+-------------------------------------------------|
-| Rule |       Derivation in G        | State |       String       |       Stack        |
-|------+------------------------------+-------+--------------------+--------------------|
-|      |              Ψ               |   q   |        uuuu        |         Ψ          |
-|   I  |             uΨU              |   q   |        uuu         |         ΨU         |
-|   I  |            uuΨUU             |   q   |         uu         |        ΨUU         |
-| III  |             uuUU             |   q   |         uu         |         UU         |
-|  IV  |             uuuU             |   q   |         u          |         U          |
-|  IV  |             uuuu             |   q   |         ε          |         ε          |
------------------------------------------------------------------------------------------
-
-String "mhoqwifyz" was not accepted by the PDA.
-
-String "bjhl" was not accepted by the PDA.
 
 Configurations on input "ana":
 -----------------------------------------------------------------------------------------
@@ -427,17 +360,6 @@ Configurations on input "ana":
 -----------------------------------------------------------------------------------------
 
 String "sofia" was not accepted by the PDA.
-
-=== PDA MENU ===
-1. Generate New strings
-2. Add strings
-3. Validate strings in the PDA
-4. Print tree for the strings accepted by the PDA
-5. Clear string list
-6. Print grammar rules
-7. Exit
-Choose an option: 5
-String list cleared.
 
 === PDA MENU ===
 1. Generate New strings
